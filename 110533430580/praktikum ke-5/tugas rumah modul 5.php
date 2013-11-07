@@ -12,7 +12,7 @@
 <form name="formlogin" align="center" action="<?php $_SERVER['php_self'];?>" method="post" onsubmit="return cek(this)">
 <div id="kotak">
 <h1 align="center">LOGIN</h1>
-<hr width="270px" color="black">
+<hr width="270px" color="white">
 <br/>
 <table border=0 align="center">
 <tr>
@@ -40,11 +40,11 @@
 <script language="JavaScript" type="text/javascript">
 function cek(){
     if(formlogin.user.value == ""){
-        alert('Anda belum memasukkan Username !');
+        alert('Username belum di masukkan !');
         return false;
     }
     else if(formlogin.password.value==""){    
-        alert('Anda belum memasukkan Password !');
+        alert('Password belum di masukkan !');
         return false;
     }    
 return true;
@@ -53,7 +53,7 @@ function cekHuruf(e){
     e = (e) ? e : window.event
     var charCode = (e.which) ? e.which : e.keyCode
     if ((charCode > 31 && charCode < 65) || (charCode > 90 && charCode < 97) || charCode > 122) {
-        alert('Username dan Password Anda Harus Berupa Huruf !');
+        alert('Tipe Username dan Password di usahakan huruf !');
         return false;
     }
     return true;
@@ -63,13 +63,13 @@ function cekHuruf(e){
 <?php
 if(is_string($_POST['user']) AND ($_POST['password'])){    
     if (($_POST['user']=='auk')AND($_POST['password']=='galau')){
-        echo 'Anda berhasil Login <br/>';
-        echo 'Selamat datang ' . $_POST['user'] ;
+        echo 'Login telah berhasil <br/>';
+        echo 'WELCOME ' . $_POST['user'] ;
         require_once './administ.php';
         exit();
     }
     else{
-        echo "<script>alert ('Username atau Password Anda Salah !');</script>";
+        echo "<script>alert ('Password dan Username salah coba lagi !');</script>";
     }
 }
 ?>
