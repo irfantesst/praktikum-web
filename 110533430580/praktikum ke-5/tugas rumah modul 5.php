@@ -8,7 +8,7 @@
 </style>	
 </head>
 
-<body bgcolor="orange" onLoad="document.formlogin.user.focus();">
+<body bgcolor="blue" onLoad="document.formlogin.user.focus();">
 <form name="formlogin" align="center" action="<?php $_SERVER['php_self'];?>" method="post" onsubmit="return cek(this)">
 <div id="kotak">
 <h1 align="center">LOGIN</h1>
@@ -62,7 +62,7 @@ function cekHuruf(e){
 
 <?php
 if(is_string($_POST['user']) AND ($_POST['password'])){    
-    if (($_POST['user']=='auk')AND($_POST['password']=='galau')){
+    if (($_POST['user']=='irfan')AND($_POST['password']=='door')){
         echo 'Login telah berhasil <br/>';
         echo 'WELCOME ' . $_POST['user'] ;
         require_once './administ.php';
